@@ -16,15 +16,11 @@ public class DenseOresRegistry {
     public static Map<Integer, DenseOre> ores = new HashMap<Integer, DenseOre>();
 
     // add vanilla entries (TODO: add a way to disable vanilla ores)
-    public static void initVanillaOres() {
-        registerOre(0, "minecraft:iron_ore", 0, 1, "stone", "iron_ore", 0,  0);
-        registerOre(1, "minecraft:gold_ore", 0, 1, "stone", "gold_ore", 0,  0);
-        registerOre(2, "minecraft:lapis_ore", 0, 1, "stone", "lapis_ore", 0,  0);
-        registerOre(3, "minecraft:diamond_ore", 0, 1, "stone", "diamond_ore", 0,  0);
-        registerOre(4, "minecraft:emerald_ore", 0, 1, "stone", "emerald_ore", 0,  0);
-        registerOre(5, "minecraft:redstone_ore", 0, 1, "stone", "redstone_ore", 0,  0);
-        registerOre(6, "minecraft:coal_ore", 0, 1, "stone", "coal_ore", 0,  0);
-        registerOre(7, "minecraft:quartz_ore", 0, 1, "netherrack", "quartz_ore", 0,  0);
+    public static void initExampleOres() {
+        registerOre(0, "minecraft:bedrock", 0, 0, "stone", "bedrock", 0,  0);
+        //because vanilla ores were actually being registered here first, and not in the config, this data was fixed 
+        //so things were being ignored even if you changed them in the config - like probability
+        //hence why I replaced this with a "dense bedrock" entry, which also provides the config example now
     }
 
     public static String blockPrefix = DenseOresMod.MODID;
@@ -46,7 +42,7 @@ public class DenseOresRegistry {
         }
     }
 
-    public static DenseOre registerOre(int id, String baseBlock, int metadata, double prob, String underlyingBlock, String texture, int retroGenId,  int renderType) {
+    public static DenseOre registerOre(int id, String baseBlock, int metadata, int prob, String underlyingBlock, String texture, int retroGenId,  int renderType) {
 
         if ("".equals(baseBlock) || "minecraft:air".equals(baseBlock))
             return null;

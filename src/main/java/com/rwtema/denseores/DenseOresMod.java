@@ -31,7 +31,7 @@ public class DenseOresMod {
     @EventHandler
     public void init(FMLInitializationEvent event) {
     	// load the config in the init to make sure other mods have finished loading
-    	LogHelper.info("Ph'nglui mglw'nafh, y'uln Dense Ores shugg ch'agl");
+    	LogHelper.info("Ph'nglui mglw'nafh, y'uln dense as tema shugg ch'agl");
         DenseOresConfig.instance.loadConfig(config);
         DenseOresRegistry.buildBlocks();
 
@@ -48,7 +48,7 @@ public class DenseOresMod {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit();
-        LogHelper.info("Dense Ores is fully loaded but sadly it cannot tell you the unlocalized name for dirt.");
+        LogHelper.info("Denser Ores is fully loaded but sadly it cannot tell you how to cure stupidity.");
     }
 
     boolean doneLastMinuteStuff = false;

@@ -31,7 +31,8 @@ public class WorldGenOres implements IWorldGenerator {
         }
     }
 
-    public void genChunk(Chunk chunk, Random random, BlockDenseOre dense_ore_blocks, int id) {
+    //old gen code
+    /*public void genChunk(Chunk chunk, Random random, BlockDenseOre dense_ore_blocks, int id) {
         for (int i = 0; i < 1000; i++) {
             int x = random.nextInt(16);
             int y = 1 + random.nextInt(80);
@@ -42,8 +43,26 @@ public class WorldGenOres implements IWorldGenerator {
             if (block == dense_ore_blocks.getBlock(id) && chunk.getBlockMetadata(x, y, z) == dense_ore_blocks.entry[id].metadata)
                 overrideChunkBlock(chunk, x, y, z, dense_ore_blocks, id);
         }
+    }*/
+    
+    public void genChunk(Chunk chunk, Random random, BlockDenseOre dense_ore_blocks, int id) {
+    	for (int blockX = 0; blockX < 16; blockX++) {
+			for (int blockZ = 0; blockZ < 16; blockZ++) {
+				for (int blockY = 80; blockY > 0; blockY--) {
+					Block block = chunk.getBlock(blockX, blockY, blockZ);
+					
+					int probl = random.nextInt(100) + 1;
+										
+		            if (block == dense_ore_blocks.getBlock(id) && chunk.getBlockMetadata(blockX, blockY, blockZ) == dense_ore_blocks.entry[id].metadata) {
+		            	if (probl < dense_ore_blocks.entry[id].prob) {
+		            		overrideChunkBlock(chunk, blockX, blockY, blockZ, dense_ore_blocks, id);
+		            	}
+		            }
+				}
+			}
+    	}
     }
-
+    
     // it seems that if an ore has a tile entity it crashes during retrogen
     // so here's a custom method that doesn't cause issues with overwriting blocks.
     // I wouldn't recommend copying this method though.

@@ -22,16 +22,17 @@ public class DenseOresConfig {
         Configuration config = new Configuration(file);
 
         config.load();
-
+        
         this.WORLD_GENERATION_ENABLED = config.get(CATEGORY_WORLD_GENERATION, "enabled", true).getBoolean(true);
-
-        DenseOresRegistry.initVanillaOres();
+        
+        DenseOresRegistry.initExampleOres();
 
         // 'get' the vanilla ore entries to ensure that they exist
         for (DenseOre ore : DenseOresRegistry.ores.values()) {
 
             String cat = CATEGORY_BLOCK + ore.id;
 
+            config.get(cat, "Addendum: Initial block and example config. Do not replace.", 0);
             config.get(cat, "baseBlock", ore.baseBlock);
             config.get(cat, "baseBlockMeta", ore.metadata);
             config.get(cat, "baseBlockTexture", ore.texture);
@@ -59,7 +60,7 @@ public class DenseOresConfig {
                         DenseOre denseOre = DenseOresRegistry.registerOre(id,
                                 config.get(cat, "baseBlock", "").getString().trim(),
                                 config.get(cat, "baseBlockMeta", 0).getInt(0),
-                                config.get(cat, "denseOreProbability", 1).getDouble(1),
+                                config.get(cat, "denseOreProbability", 5).getInt(),
                                 config.get(cat, "underlyingBlock", "stone").getString().trim(),
                                 config.get(cat, "baseBlockTexture", "").getString().trim(),
                                 config.get(cat, "retroGenId", 0).getInt(),

@@ -14,7 +14,7 @@ public class DenseOre {
     public String baseBlock;
     public String modOwner;
     public int metadata;
-    public double prob;
+    public int prob;
     public String underlyingBlock;
     public String underlyingBlocktexture;
     public String texture;
@@ -24,7 +24,7 @@ public class DenseOre {
     public String baseOreDictionary = "";
     public String oreDictionary = "";
 
-    public DenseOre(int id, String baseBlock, int metadata, double prob, String underlyingBlock, String texture, int retroGenId, int renderType) {
+    public DenseOre(int id, String baseBlock, int metadata, int prob, String underlyingBlock, String texture, int retroGenId, int renderType) {
         this.id = id;
         this.baseBlock = baseBlock;
         this.metadata = metadata;
