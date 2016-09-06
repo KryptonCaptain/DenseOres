@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import cpw.mods.fml.common.Loader;
 import net.minecraftforge.common.config.Configuration;

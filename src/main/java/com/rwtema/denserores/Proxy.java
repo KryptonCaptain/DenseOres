@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 public class Proxy {
     public void postInit() {

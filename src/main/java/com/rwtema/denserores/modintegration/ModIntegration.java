@@ -1,8 +1,8 @@
-package com.rwtema.denseores.modintegration;
+package com.rwtema.denserores.modintegration;
 
-import com.rwtema.denseores.BlockDenseOre;
-import com.rwtema.denseores.DenseOre;
-import com.rwtema.denseores.DenseOresRegistry;
+import com.rwtema.denserores.BlockDenseOre;
+import com.rwtema.denserores.DenseOre;
+import com.rwtema.denserores.DenseOresRegistry;
 import cpw.mods.fml.common.registry.GameData;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;

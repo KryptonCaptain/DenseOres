@@ -1,13 +1,13 @@
 [
 {
-  "modid": "denseores",
-  "name": "Dense Ores",
+  "modid": "denserores",
+  "name": "Denser Ores",
   "description": "Adds new ore variants to the game",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authors": ["RWTema"],
+  "authors": ["RWTema, KryptonCaptain"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],

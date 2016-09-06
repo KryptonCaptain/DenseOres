@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

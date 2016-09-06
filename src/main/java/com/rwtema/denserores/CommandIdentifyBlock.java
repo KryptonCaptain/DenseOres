@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.relauncher.Side;
@@ -19,7 +19,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 public class CommandIdentifyBlock extends CommandBase {
     @Override
     public String getCommandName() {
-        return "denseores_identifyblock";
+        return "denserores_identifyblock";
     }
 
     @Override

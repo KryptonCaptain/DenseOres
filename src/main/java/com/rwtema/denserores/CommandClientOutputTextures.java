@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +16,7 @@ import java.io.IOException;
 public class CommandClientOutputTextures extends CommandBase {
     @Override
     public String getCommandName() {
-        return "denseores_outputtextures";
+        return "denserores_outputtextures";
     }
 
 
@@ -52,8 +52,8 @@ public class CommandClientOutputTextures extends CommandBase {
                     }
                     s1 = s1.toLowerCase();
 
-                    File dir = new File(Minecraft.getMinecraft().mcDataDir, "denseoretextures");
-                    File moddir = new File(new File(new File(new File(new File(dir, "assets"), "denseores"), "textures"), "blocks"), s1);
+                    File dir = new File(Minecraft.getMinecraft().mcDataDir, "denseroretextures");
+                    File moddir = new File(new File(new File(new File(new File(dir, "assets"), "denserores"), "textures"), "blocks"), s1);
                     File f = new File(moddir, s2 + ".png");
 
                     try {

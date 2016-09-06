@@ -1,4 +1,4 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;

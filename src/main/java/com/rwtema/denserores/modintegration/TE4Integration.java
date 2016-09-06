@@ -1,6 +1,6 @@
-package com.rwtema.denseores.modintegration;
+package com.rwtema.denserores.modintegration;
 
-import com.rwtema.denseores.DenseOre;
+import com.rwtema.denserores.DenseOre;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;

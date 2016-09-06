@@ -1,4 +1,4 @@
-package com.rwtema.denseores.modintegration;
+package com.rwtema.denserores.modintegration;
 
 import cpw.mods.fml.relauncher.ReflectionHelper;
 

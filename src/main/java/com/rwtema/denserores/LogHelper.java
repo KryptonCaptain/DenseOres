@@ -1,11 +1,11 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
 import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class LogHelper {
-    public static Logger logger = LogManager.getLogger("denseores");
+    public static Logger logger = LogManager.getLogger("denserores");
 
     public static boolean isDeObf = false;
 

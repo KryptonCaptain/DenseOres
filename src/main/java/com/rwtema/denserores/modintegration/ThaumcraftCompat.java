@@ -1,6 +1,6 @@
-package com.rwtema.denseores.modintegration;
+package com.rwtema.denserores.modintegration;
 
-import com.rwtema.denseores.DenseOre;
+import com.rwtema.denserores.DenseOre;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Optional.Method;
 import net.minecraft.item.ItemStack;

@@ -19,7 +19,7 @@ apply plugin: 'forge'
 
 version = "1.6.5"
 group= "com.rwtema.denseores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "denseores"
+archivesBaseName = "denserores"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10" 

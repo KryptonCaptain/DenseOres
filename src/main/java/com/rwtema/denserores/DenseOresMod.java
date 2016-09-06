@@ -1,6 +1,6 @@
-package com.rwtema.denseores;
+package com.rwtema.denserores;
 
-import com.rwtema.denseores.modintegration.ModIntegration;
+import com.rwtema.denserores.modintegration.ModIntegration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -15,10 +15,10 @@ import java.io.File;
 dependencies = 	"after:*")
 
 public class DenseOresMod {
-    public static final String MODID = "denseores";
+    public static final String MODID = "denserores";
     public static final String VERSION = "1.0";
 
-    @SidedProxy(serverSide = "com.rwtema.denseores.Proxy", clientSide = "com.rwtema.denseores.ProxyClient")
+    @SidedProxy(serverSide = "com.rwtema.denserores.Proxy", clientSide = "com.rwtema.denserores.ProxyClient")
     public static Proxy proxy;
 
     private File config;
@@ -66,7 +66,7 @@ public class DenseOresMod {
         for (FMLMissingMappingsEvent.MissingMapping map : event.getAll()) {
             // check the missing mapping for any of the incorrect names
             if (map.name.startsWith("specialores:") // original mod id
-                    || map.name.startsWith("denseores:"))    // correct mod name but name may be duplicated
+                    || map.name.startsWith("denserores:"))    // correct mod name but name may be duplicated
             {
                 // retrieve the block's number from the end of the string
                 int k = -1;
